@@ -1,0 +1,34 @@
+﻿@model LessonListViewModel
+
+@{
+    ViewBag.Title = "Title";
+    Layout = "_Layout";
+}
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+</style>
+
+<h2>Lesson List</h2>
+<ul class="list-group">
+
+    @foreach (var lesson in Model.Lessons)
+    {
+
+        <li class="list-group-item"> @lesson.LessonId  <strong>@lesson.LessonName</strong></li>
+
+    }
+
+</ul>

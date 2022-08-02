@@ -1,0 +1,21 @@
+﻿@model LessonUpdateViewModel
+
+@{
+    ViewData["Title"] = "Update Lesson";
+}
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm("Index", "LessonUpdate", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+     <div class="form-group">
+        @Html.LabelFor(n=>n.LessonId)
+        @Html.TextBoxFor(n=>n.LessonId,new {@type="number",@class="form-control",@placeholder="Id"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n=>n.LessonName)
+        @Html.TextBoxFor(n=>n.LessonName,new {@type="text",@class="form-control",@placeholder="Name"})
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Add</button>
+}

@@ -1,0 +1,18 @@
+﻿@model LessonDeleteViewModel
+
+@{
+    ViewData["Title"] = "Delete Lesson";
+}
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm("Index", "LessonDelete", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+     <div class="form-group">
+        @Html.LabelFor(n=>n.LessonId)
+        @Html.TextBoxFor(n=>n.LessonId,new {@type="number",@class="form-control",@placeholder="Id"})
+    </div>
+    
+    
+
+    <button type="submit" class="btn btn-primary">Delete</button>
+}

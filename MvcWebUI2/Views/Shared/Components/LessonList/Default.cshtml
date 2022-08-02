@@ -1,0 +1,20 @@
+﻿@model LessonListViewModel
+
+
+
+<h2>Lesson List</h2>
+<div class="list-group">
+        
+    <a href="/student/index" class="list-group-item" > Tümünü göster  </a>
+        @foreach (var lesson in Model.Lessons)
+        {
+                var css = "list-group-item" ;
+        if(lesson.LessonId == Model.CurrentLesson)
+        {
+            css += " active";
+        }
+                <a href="/student/index?lesson=@lesson.LessonId" class="@css" > @lesson.LessonId  </a>
+
+        }
+   
+</div>

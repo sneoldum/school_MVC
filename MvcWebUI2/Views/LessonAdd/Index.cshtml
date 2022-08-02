@@ -1,0 +1,18 @@
+﻿@model LessonAddViewModel
+
+@{
+    ViewData["Title"] = "Add Lesson";
+}
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm("Index", "LessonAdd", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+     
+    <div class="form-group">
+        @Html.LabelFor(n=>n.LessonName)
+        @Html.TextBoxFor(n=>n.LessonName,new {@type="text",@class="form-control",@placeholder="Name"})
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Add</button>
+}
