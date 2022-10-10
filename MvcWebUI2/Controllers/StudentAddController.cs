@@ -9,18 +9,15 @@ namespace MvcWebUI2.Controllers
     public class StudentAddController : Controller
     {
         private IStudentService _studentService;
-
         public StudentAddController(IStudentService studentService)
         {
             _studentService = studentService;
         }
-
         public IActionResult Index()
         {
             var model = new StudentAddViewModel();
             return View(model);
         }
-
         [HttpPost]
         public IActionResult Index(StudentAddViewModel studentDetail)
         {
@@ -32,9 +29,7 @@ namespace MvcWebUI2.Controllers
                 StudentName = studentDetail.StudentName,
                 StudentSurname = studentDetail.StudentSurname
             };
-
             _studentService.Add(student);
-
             return View(studentDetail);
         }
 

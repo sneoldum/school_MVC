@@ -8,7 +8,6 @@ namespace MvcWebUI2.Controllers
     public class StudentController : Controller
     {
         private IStudentService _studentService;
-
         public StudentController(IStudentService studentService)
         {
             _studentService = studentService;
@@ -17,7 +16,7 @@ namespace MvcWebUI2.Controllers
         {
             var model = new StudentListViewModel
             {
-                Students = lesson.LessonId>0?_studentService.GetByLesson(lesson):  _studentService.GetAll()
+                Students = lesson.LessonId > 0 ? _studentService.GetByLesson(lesson.LessonId) : _studentService.GetAll()
             };
             return View(model);
         }

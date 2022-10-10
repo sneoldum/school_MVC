@@ -10,6 +10,6 @@ namespace Business.Abstract
         List<Lesson> GetAll();
         public Lesson Add(LessonDetail lessonDetail);
         public Lesson Update(LessonDetail lessonDetail);
-        public void Delete(LessonDetail lessonDetail);
+        public void Delete(int lessonId);
     }
 }
