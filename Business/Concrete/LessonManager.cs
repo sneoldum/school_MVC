@@ -55,13 +55,13 @@ namespace Business.Concrete
             return lesson;
         }
 
-        public void Delete(LessonDetail lessonDetail)
+        public void Delete(int lessonId)
         {
             StudentDetail studentDetail = new StudentDetail();
             Lesson lesson = new Lesson
             {
 
-                LessonId = lessonDetail.LessonId,
+                LessonId = lessonId,
             };
 
             Student student = new Student
@@ -69,7 +69,7 @@ namespace Business.Concrete
                 Id = studentDetail.Id,
                 LessonId = studentDetail.LessonId,
             };
-            if (studentDetail.LessonId == lessonDetail.LessonId)
+            if (studentDetail.LessonId == lessonId)
             {
                 _studentService.Delete(studentDetail);
             }

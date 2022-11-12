@@ -25,7 +25,5 @@ namespace MvcWebUI2.Controllers
         {
             return View();
         }
-
-
     }
 }

@@ -4,6 +4,7 @@ using Entity.Concrete;
 using Entity.Concrete.Dtos;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Business.Concrete
 {
@@ -46,15 +47,17 @@ namespace Business.Concrete
 
         public List<Student> GetAll()
         {
-            return _studentDal.GetList();
+            var list = _studentDal.GetList();
+            return list;
         }
 
 
 
-        public List<Student> GetByLesson(LessonDetail lessonDetail)
+        public List<Student> GetByLesson(int lessonId)
         {
-
-            return _studentDal.GetList(p => p.LessonId == lessonDetail.LessonId);
+            var getList = GetAll();
+            var students = getList.Where(p => p.LessonId == lessonId);
+            return students.ToList();
         }
 
         public Student Update(StudentDetail studentDetail)

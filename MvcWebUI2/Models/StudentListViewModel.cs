@@ -9,7 +9,6 @@ namespace MvcWebUI2.Models
         {
             Students = new List<Student>();
         }
-
         public List<Student> Students { get; set; }
     }
 }

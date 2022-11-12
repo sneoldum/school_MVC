@@ -4,8 +4,6 @@ namespace MvcWebUI2.Models
 {
     public class StudentAddViewModel
     {
-        public int Id { get; set; }
-
         [DisplayName("Öğrenci Adı")]
         public string StudentName { get; set; }
         public string StudentSurname { get; set; }

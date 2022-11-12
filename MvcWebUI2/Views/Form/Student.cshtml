@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Student Options";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form >
+
+    <a class="btn btn-outline-success" style="border:0px" asp-area="" asp-controller="StudentAdd" asp-action="Index">Add a Student</a>
+    
+    <a class="btn btn-outline-danger" style="border:0px" asp-area="" asp-controller="StudentDelete" asp-action="Index">Delete a Student</a>
+
+    <a class="btn btn-outline-info" style="border:0px" asp-area="" asp-controller="StudentUpdate" asp-action="Index">Update a Student</a>
+
+</form>

@@ -9,7 +9,7 @@ namespace Business.Abstract
     public interface IStudentService
     {
         List<Student> GetAll();
-        public List<Student> GetByLesson(LessonDetail lessonDetail);
+        public List<Student> GetByLesson(int lessonId);
         public Student Add(StudentDetail studentDetail);
         public Student Delete(StudentDetail studentDetail);
         public Student Update(StudentDetail studentDetail);
